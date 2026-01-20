@@ -199,7 +199,7 @@ switch (homeworkQuestion) {
 
   case "Why is":
     console.log(
-      "Why is it did you call super dupa crazy homework and always missing?"
+      "Why is it did you call super dupa crazy homework and always missing?",
     );
 
   case "What is":
@@ -233,6 +233,8 @@ if (number < 0) {
   console.log("Double digit number");
 } else {
   console.log(
-    "Definitely not a negative, single or double digit number, so it is something else"
+    "Definitely not a negative, single or double digit number, so it is something else",
   );
 }
+
+//test 2
