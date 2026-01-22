@@ -83,7 +83,7 @@ console.log("Final display name:", answer); //- Print the final value.
 // Challenge (Optional ⭐)
 let username = "Richard"; // 1. Create a variable called `username`.
 
-console.log("welcome back" || "Please sign up");
+console.log("welcome back");
 
 // > Use **logical** operators only.>
 
