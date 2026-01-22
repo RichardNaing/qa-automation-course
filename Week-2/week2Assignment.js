@@ -58,20 +58,39 @@ myBrotherCurrentHigh = 7.2;
 
 console.log(currentHigh !== myBrotherCurrentHigh);
 
+// ## Part 3: Logical Operators
+//1. Create two comparison expressions and combine them using `&&`.
+let temperature = 30;
+let isSunny = true;
+
+let goodWeatherForWalk = temperature >= 20 && isSunny === true;
+console.log(goodWeatherForWalk);
+
+//2. Create two comparison expressions and combine them using `||`.
+
+temperature = 70;
+isSunny = true;
+
+goodWeatherForWalk = temperature >= 60 || isSunny === true;
+console.log("Should we go walk outside?", goodWeatherForWalk);
+
+//3. Create a boolean variable and Reverse its value using !
+
+let isSheHot = true;
+console.log("Not Hot Baby!", !isSheHot);
+
 // Part 4: Truthy vs Falsy
 // 1. Create a variable with a value that is falsy.
 let logInId = "";
-if (logInId) {
-  console.log(
-    "Create a variable with a vlue that is fasly. Falsy value detected",
-  ); // * Use it in an if statement
+if (!logInId) {
+  console.log("Falsy value detected!"); // * Use it in an if statement
 } // * Print "Falsy value detected" if it runs
 
 // 2. Create a variable with a value that is **truthy**.
 let helloMessage = "Hello from Boise!"; // - Use it in an `if` statement
 
 if (helloMessage) {
-  console.log("Truthy value detected because non-empty string is truthy!");
+  console.log("Truthy value detected!");
 } // - Print `"Truthy value detected"` if it runs
 
 // 3. Create a variable and use `||` to give it a **default value**.
