@@ -92,10 +92,28 @@ console.log(akbarAliFavorite.lastIndexOf("Red"));
 
 // 8.3 at() - Gets an elements at a specific postion
 
-console.log(akbarAliFavorite.at(10));
+console.log(akbarAliFavorite.at(10)); // commonly asked interview***
 
 // 8.4 include() - checks if an elements exists inside and array
 
 const nycTrainLanes = ["F", "E", "B", "D", "Z", "J"];
 console.log(nycTrainLanes.includes("B"));
 console.log(nycTrainLanes.includes("O"));
+
+const kaungFruitsArray = ["Apple", "Banana", "Kiwi"];
+const kaungFruitsArrayString = kaungFruitsArray.join("-");
+console.log(kaungFruitsArrayString);
+
+// 2. Arry.from() - creates a an array from a string
+
+const str = "Hello";
+const chars = Array.from(str);
+console.log(chars);
+
+// 3. Array.isArray() - check if a value is an array
+
+const nycNumbers = [1, 2, 3, 4, 5];
+console.log(Array.isArray(nycNumbers));
+
+const newNumber = 1;
+console.log(Array(newNumber));
