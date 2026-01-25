@@ -5,5 +5,3 @@ console.log(myAge);
 console.log(myAge);
 myAge--;
 console.log(myAge);
-
-
