@@ -94,3 +94,113 @@ const word = "ENGINE";
 const word1 = word.split(""); // Split into characters
 
 console.log(word1);
+// ---------------------------------------------------------------------------
+
+// PART 2: STRING MANIPULATION
+// Task 6: Clean a String
+
+//1. Remove extra spaces from the string
+
+const crazyMessyText = "   Let's   code untile you   really enjoy         it! ";
+console.log(crazyMessyText.trim()); // only clean at front and back extra spaces (not in the middle spaces)
+const cleaned = crazyMessyText.trim();
+console.log("cleanedString :", crazyMessyText.trim()); //2. Log the cleaned string
+console.log("Length:", cleaned.length); //3. Log its length
+
+// Task 7: Case & Access
+
+let studentName = "Richard Naing";
+console.log("All uppercase:", studentName.toUpperCase()); // 1. Convert the string to **uppercase**
+console.log("All uppercase:", studentName.toLowerCase()); // 2. Convert the string to **lowercase**
+console.log("Log the first character:", studentName.slice(0, 7)); // 3. Log the **first** character
+console.log("Log the last character:", studentName.slice(7)); // 4. Log the **last** character
+
+// Task 8: Slice & Replace
+
+let studentEmail = "richardbbnaing@gmail.com"; // 1. Extract the **first word**
+console.log("Extract the first word:", studentEmail.slice(0, 7));
+console.log("Extract the last word:", studentEmail.slice(21)); // 2. Extract the **last word**
+console.log(
+  "Replace obe word another:",
+  studentEmail.replace("gmail", "yahoo"), // 3. Replace one word with another
+);
+
+// ask 9: Search Methods
+let carCompanyName = "tesla.carbrand@tesla.com";
+
+console.log(carCompanyName.includes("car")); // 1. Check if the string includes `"car"`
+console.log("Position of the 'car':", carCompanyName.indexOf("car")); // 2. Find the position of a word
+console.log("Strat with a specific word", carCompanyName.startsWith("tesla")); // 3. Check if the string starts with a specific word
+console.log("Strat with a specific word", carCompanyName.endsWith("com")); // 4. Check if the string ends with a specific word//
+
+// Task 10: Split & Concat
+
+let listToBuy = "Tesla, GMC, Ford, Jeep";
+console.log(listToBuy.split(",")); // 1. Split the sentence into words
+console.log(listToBuy.concat(" ", carCompanyName)); // 2. Join two strings using a method (not `+`)
+
+// Task 11: Template Literals
+
+const carbrand = "Tesla Model Y"; // - car brand
+const YearMade = 2024; // - car year (has to be in the past)
+const currentYear = 2026;
+console.log("carAge:", currentYear - YearMade); // - car age (think about how you get the car age)
+
+const sentence = `My ${carbrand} is from ${YearMade} and it is already ${console.log("carAge:", currentYear - YearMade)} year old! What a lovely car!`;
+console.log(sentence); // Create a sentence using the variables and print the output
+
+// PART 3: NUMBERS
+// Task 12: Rounding
+
+let myhigh = 5.11;
+console.log(Math.round(5.11)); // 1. Round a decimal normally
+console.log(Math.floor(5.11)); //2. Always round down
+console.log(Math.ceil(5.11)); //3. Always round up
+console.log(Math.trunc(5.11)); //4. Remove the decimal part
+
+// Task 13: Formatting
+
+let teslaPrice = 65000.9136;
+console.log(teslaPrice.toFixed(2)); // 1. Format a number to **2 decimal places**
+console.log(Number("Sity Five Thounsand")); // 2. Explain (in comments) why the result is **not a number**
+
+// Task 14: Conversions
+
+let myBrotherHigh = "6";
+let mySisterHigh = "5.78";
+let myBrotherInLawHigh = "5 and nine";
+
+console.log("strNumber:", myBrotherHigh); // 1. Convert a numeric string into a number
+console.log("strDecimal:", mySisterHigh); // 2. Convert a decimal string into an integer
+console.log("strMessy:", myBrotherHigh); // 3. Convert a decimal string into a float
+
+// Task 15: Checking
+
+console.log(Number.isInteger(9)); // 1. Check if a value is **Not a Number**
+console.log(Number.isInteger(9.5)); // 2. Check if a number is an integer
+
+// Task 16: Math Utilities
+
+const num1 = -25;
+const num2 = 42;
+const num3 = 7.89;
+const favNumbers = [15, -8, 42, 3, 99, -17, 56];
+
+console.log(Math.abs(num1)); // 1. Find the absolute value of a number
+console.log(Math.min(...favNumbers)); // 2. Find the smallest number
+console.log(Math.max(...favNumbers)); // 3. Find the largest number
+console.log(Math.pow(10, 5)); // 4. Raise a number to a power
+console.log(Math.sqrt(25)); // 5. Find the square root of a number
+
+/// Task 17: Random Numbers
+
+console.log(Math.random());
+
+let random50000to50010 = Math.floor(Math.random() * (50010 - 5000 + 1)) + 200;
+console.log(random50000to50010); // 1. Generate a random number between 0 and 1
+
+console.log(Math.random());
+
+let random501to1000 = Math.floor(Math.random() * (1000 - 501));
+console.log(random501to1000); // 2. Generate a random whole number between **1 and 10**
+//const randomInteger = Math.floor(Math.random() * (max - min + 1)) + min; // 3. Explain the formula in comments
