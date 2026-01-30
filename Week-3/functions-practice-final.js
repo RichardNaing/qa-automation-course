@@ -144,3 +144,5 @@ function budgetCheck(carPrice, userBudget) {
 console.log("Task 10:", budgetCheck(5000, 6000));
 console.log("Task 10:", budgetCheck(7000, 6000));
 console.log("Task 10:", budgetCheck(-5000, 6000));
+
+// !!! I still have to relied on chatGPT, I have to pratic more!!!
