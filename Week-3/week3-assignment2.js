@@ -91,3 +91,75 @@ function findStudent(nameOfStudent) {
   }
 }
 findStudent(students);
+
+// Task 7: Skip a Value
+
+// **Use a `for...of` loop**
+
+// Write a function that:
+
+// 1. Takes an array and a value to skip
+// 2. Prints all values except the skipped one
+
+const students1 = ["MieMie", "Kyaw", "Eric", "John"];
+
+function findStudent(nameOfStudent, skipStudent) {
+  for (const students1 of nameOfStudent) {
+    if (students1 === skipStudent) {
+      continue;
+    }
+    console.log("Here is the Name:", students1);
+  }
+}
+findStudent(students1, "Eric");
+
+// PART 5: APPLYING LOGIC
+
+// ### 🔄 Task 8: Uppercase Strings
+
+// **Use both `for` and `for...of` loops. Write two separate functions for different loop types.**
+
+// Write a function that:
+
+// 1. Takes an array of strings
+// 2. Returns a **new array** with all strings converted to **uppercase**
+
+// 📌 Do NOT modify the original array
+
+const students2 = ["Tohir", "Kyaw", "Eric", "John"];
+
+function letDoUpperCase(Name) {
+  const result = [];
+
+  for (let i = 0; i < Name.length; i++) {
+    result.push(Name[i].toUpperCase());
+  }
+
+  return result;
+}
+
+const upperCase = letDoUpperCase(students2);
+console.log("FOR loop result:", upperCase);
+console.log("Original array:", students2);
+
+const students3 = ["Tohir", "Kyaw", "Eric", "John"];
+
+function printLastToFirst(Name) {
+  for (let i = Name.length - 1; i >= 0; i--) {
+    console.log(Name[i]);
+  }
+}
+
+printLastToFirst(students3);
+
+const students4 = ["Tohir", "Kyaw", "Eric", "John", "Michael"];
+
+function lengthChecker(Name) {
+  for (let i = 0; i < Name.length; i++) {
+    if (Name[i].length > 4) {
+      console.log(Name[i]);
+    }
+  }
+}
+
+lengthChecker(students4);
