@@ -1,4 +1,2 @@
-let isLoggedIn = true;
-let status = isLoggedIn ? "Welcome back!" : "Please Log in.";
-return;
-console.log(status);
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 === 0.3);
