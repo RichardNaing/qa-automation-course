@@ -17,3 +17,7 @@ let Task1 = ["Apple", "Intel", "Tesla", "NVDA", "AMD"];
 for (let i = 0; i < Task1.length; i++) {
   console.log("Task 1:", Task1[i]);
 }
+
+for (let i = 0; i <= 10; i += 2) {
+  console.log(i);
+}
