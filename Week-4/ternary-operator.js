@@ -1,2 +1,8 @@
-console.log(0.1 + 0.2);
-console.log(0.1 + 0.2 === 0.3);
+let str1 = "Hello";
+let str2 = "World";
+console.log(str1.concat(" | ", str2));
+
+console.log(str1 + " | " + str2);
+
+let text = "JavaScript is awesome";
+console.log(text.indexOf("Script"));
