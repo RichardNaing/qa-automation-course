@@ -17,3 +17,5 @@ function cleanText(text) {
 }
 
 console.log("Task 1:", cleanText(sentenceAboutCars));
+
+cleanText(comeOn);
