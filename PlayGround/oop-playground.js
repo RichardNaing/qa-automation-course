@@ -1,0 +1,159 @@
+//🔹 PART 1: CLASS FUNDAMENTALS
+// -----------------------------------------------------------------------------------
+//Task 1: Create a Car Class
+class Car {
+  // Private field
+  #fuelLevel;
+
+  constructor(brand, price) {
+    this.brand = brand;
+    this.price = price;
+    this.#fuelLevel = 100;
+
+    // We'll count cars from the outside
+  }
+
+  drive() {
+    this.#fuelLevel -= 10;
+    // console.log(`${this.brand} is start driving somewhere...`);
+  }
+
+  refuel() {
+    this.#fuelLevel = 100;
+    // console.log(
+    //   `${this.brand} has been refueled to 100% but no money for eat!`,
+    // );
+  }
+
+  getInfo() {
+    return `${this.brand} costs me $${this.price}, it is crazy and has ${this.#fuelLevel}% refueled but no money for eat! COME ON!`;
+  }
+
+  //Task 2: Methods with Parameters
+  discount(amount) {
+    this.price -= amount;
+    if (this.price < 0) this.price = 0;
+  }
+
+  isExpensive(limit) {
+    return this.price > limit ? "Expensive" : "Affordable";
+  }
+
+  // const richardOldCar = new Car("Jeep", 50000);
+  // richardOldCar.drive();
+  // richardOldCar.refuel();
+  // console.log(richardOldCar.getInfo());
+  // richardOldCar.discount(10000);
+  // console.log(richardOldCar.getInfo());
+  // console.log("Is it expensive or affordable?", richardOldCar.isExpensive(40000));
+
+  //   //🔹 PART 2: ENCAPSULATION (GETTERS & SETTERS)
+  //   // Getter
+  get priceTag() {
+    return `$${this.price}`;
+  }
+
+  // Setter with validation
+  set updatePrice(newPriceBaby) {
+    if (newPriceBaby < 0) {
+      this.price = 0;
+    } else {
+      this.price = newPriceBaby;
+      console.log(`Price updated to $${newPriceBaby}`);
+    }
+  }
+}
+// //🔹 PART 5: INHERITANCE
+// // ----------------------------------------------------------------------------------------------------------------------------------------
+
+class ElectricCar extends Car {
+  constructor(brand, price, batteryRange = 100) {
+    super(brand, price);
+    this.batteryRange = batteryRange;
+  }
+}
+
+//   // 🔹 PART 6: POLYMORPHISM
+//   drive() {
+//     if (this.batteryRange >= 20) {
+//       this.batteryRange -= 20;
+//       console.log(
+//         `${this.brand} (electric) is silently driving... ${this.batteryRange}% range left`,
+//       );
+//     } else {
+//       console.log(`${this.brand} has no battery left! Please charge.`);
+//     }
+//   }
+
+//   charge() {
+//     this.batteryRange = 100;
+//     console.log(`${this.brand} is fully charged (100% range)`);
+//   }
+// }
+
+// //🔹 PART 7: MINI CHALLENGE
+// // -------------------------------------------------------------------------
+
+// class Garage {
+//   constructor(garageName) {
+//     this.garageName = garageName;
+//     this.cars = [];
+//     this.#carCount = 0; // private counter instead of static
+//   }
+
+//   // Private field for counting
+//   #carCount;
+
+//   addCar(car) {
+//     this.cars.push(car);
+//     this.#carCount += 1;
+//     console.log(`${car.brand} added to ${this.garageName}`);
+//   }
+
+//   listCars() {
+//     if (this.cars.length === 0) {
+//       return "Garage is empty";
+//     }
+//     return this.cars.map((car) => car.brand).join(", ");
+//   }
+
+//   findExpensive(limit) {
+//     return this.cars
+//       .filter((car) => car.price > limit)
+//       .map((car) => `${car.brand} ($${car.price})`);
+//   }
+
+//   get totalCars() {
+//     return this.#carCount;
+//   }
+// }
+
+// // ────────────────────────────────────────────────
+// // Usage example — no statics used anywhere
+// // ────────────────────────────────────────────────
+
+// const myGarage = new Garage("Richard's Auto Haven");
+
+// const camry = new Car("Toyota Camry", 28000);
+// const modelY = new ElectricCar("Tesla Model Y", 65000);
+
+// myGarage.addCar(camry);
+// myGarage.addCar(modelY);
+
+// console.log("\nCars in garage:", myGarage.listCars());
+// console.log("Total cars in this garage:", myGarage.totalCars); // 2
+
+// console.log("\nExpensive cars (> $40000):", myGarage.findExpensive(40000));
+
+// camry.drive();
+// modelY.drive();
+
+// modelY.charge();
+// modelY.drive();
+
+// camry.discount(4000);
+// console.log("Camry after discount:", camry.getInfo());
+// console.log("Camry price with tag:", camry.priceTag);
+
+// camry.updatePrice = -10000; // clamped to 0
+// console.log("After invalid price:", camry.priceTag);
