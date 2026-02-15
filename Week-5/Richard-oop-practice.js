@@ -119,10 +119,6 @@ class Garage {
   }
 }
 
-// ────────────────────────────────────────────────
-// Example usage of Garage
-// ────────────────────────────────────────────────
-
 const myGarage = new Garage("Richard's Garage");
 
 myGarage.addCar(gasCar);
